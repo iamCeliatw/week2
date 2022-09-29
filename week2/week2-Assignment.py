@@ -91,3 +91,21 @@ def twoSum(nums, target):
                 return [i,j]
 result = twoSum([2, 11, 7, 5, 9], 9)
 print(result)
+
+#問題6
+def maxZeros(nums):
+    zeroCount = 0
+    maxZeroCount = 0
+    lens = len(nums)
+    for i in range (lens):
+        if nums[i] == 1:
+            zeroCount = 0
+        else:
+            zeroCount= zeroCount+1
+            maxZeroCount = max(zeroCount,maxZeroCount)
+    print(maxZeroCount)
+
+maxZeros([0, 1, 0, 0])
+maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0])
+maxZeros([1, 1, 1, 1, 1])
+maxZeros([0, 0, 0, 1, 1])

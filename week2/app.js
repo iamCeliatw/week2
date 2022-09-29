@@ -106,3 +106,21 @@ function twoSum(nums, target) {
 }
 let result = twoSum([2, 11, 7, 15], 9);
 console.log(result);
+
+//問題6
+function maxZeros(nums) {
+  var zeroCount = 0;
+  var maxzeroCount = 0;
+
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] === 1) {
+      zeroCount = 0;
+    } else zeroCount++;
+    maxzeroCount = Math.max(maxzeroCount, zeroCount);
+  }
+  console.log(maxzeroCount);
+}
+maxZeros([0, 1, 0, 0]);
+maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]);
+maxZeros([1, 1, 1, 1, 1]);
+maxZeros([0, 0, 0, 1, 1]);

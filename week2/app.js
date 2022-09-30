@@ -1,7 +1,7 @@
 //問題1
 function calculate(min, max, step) {
   sum = 0;
-  for (i = min; i < max + 1; i += step) {
+  for (let i = min; i < max + 1; i += step) {
     sum = sum + i;
   }
   console.log(sum);
@@ -15,7 +15,7 @@ function avg(data) {
   let sum = 0;
   let a = 0;
   let len = data.employees.length;
-  for (i = 0; i < len; i++) {
+  for (let i = 0; i < len; i++) {
     if (data.employees[i].manager === false) {
       a++;
     } else continue;
@@ -109,10 +109,10 @@ console.log(result);
 
 //問題6
 function maxZeros(nums) {
-  var zeroCount = 0;
-  var maxzeroCount = 0;
+  let zeroCount = 0;
+  let maxzeroCount = 0;
 
-  for (var i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     if (nums[i] === 1) {
       zeroCount = 0;
     } else zeroCount++;
